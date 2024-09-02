@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="tap" class="page active">
+            <h1>Tap the Circle!</h1>
+            <div id="circle" onclick="tapCircle(event)" ontouchstart="tapCircle(event)"></div>
+            <div id="score-container">
+                Coins: <span id="score">0</span>
+            </div>
+            <div id="clicks-container">
+                Clicks Left: <span id="clicks">2000</span>/2000
+            </div>
+        </div>
+        <div id="earn" class="page">
+            <h1>Earn Coins</h1>
+            <ul id="earn-list">
+                <li>Join our Telegram channel</li>
+                <li>Follow us on Twitter</li>
+                <li>Subscribe to our YouTube channel</li>
+                <li>Like our Facebook page</li>
+                <li>Follow us on Instagram</li>
+            </ul>
+        </div>
+        <div id="farm" class="page">
+            <h1>Farm</h1>
+            <button id="start-farm" onclick="startFarm()">Start Farm</button>
+            <div id="farm-info" style="display: none;">
+                <p>Farm Active!</p>
+                <h3><span id="time-left"></span></h3>
+                <p>Coins Earned: <h2 id="coins-earned">0.000</h2></p>
+                <button id="collect-coins" style="display: none;" onclick="collectCoins()">Collect Coins</button>
+            </div>
+        </div>
+        <div id="friends" class="page">
+            <h1>Friends</h1>
+            <ul id="friends-list">
+                <li>Friend 1</li>
+                <li>Friend 2</li>
+                <li>Friend 3</li>
+            </ul>
+        </div>
+    </div>
+    <div id="menu">
+        <button onclick="navigateTo('tap')">👆</button>
+        <button onclick="navigateTo('earn')">💰</button>
+        <button onclick="navigateTo('farm')">🌾</button>
+        <button onclick="navigateTo('friends')">👥</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

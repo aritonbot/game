@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+     margin: 0;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.page {
+    min-width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page.active {
+    display: flex;
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    background-color: #db9c14d8;
+    border: 10px #bf8507d8 solid;
+    border-radius: 50%;
+    margin: 20px auto;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+ }
+
+#score-container, #clicks-container {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+#menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+#menu button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#menu button:hover {
+    background-color: #777;
+}
+
+#farm button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#earn-list, #friends-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+#earn-list li, #friends-list li {
+    margin: 10px 0;
+}
+
+#earn-list li::before, #friends-list li::before {
+    content: '⭐';
+    margin-right: 10px;
+}
